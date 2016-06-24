@@ -1,0 +1,3 @@
+class Nave < ObjetoEspacial
+
+end
