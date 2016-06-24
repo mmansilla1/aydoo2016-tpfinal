@@ -1,4 +1,4 @@
-require_relative '../model/efecto_de_aumentar_masa'
+require_relative '../model/efecto_aumentar_masa'
 
 class Asteroide 
 
@@ -9,6 +9,7 @@ class Asteroide
   @choques_posibles
 
   def initialize(vida, masa)     
+    
     @vida = vida    
     @masa = masa
     @choques_posibles = Hash.new

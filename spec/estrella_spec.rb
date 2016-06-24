@@ -5,15 +5,15 @@ describe 'Estrella' do
 
   it 'deberia crear una estrella con 50 unidades de vida y 10 unidades de masa' do
     
-    vida_esperada = 50
-    masa_esperada = 10
-    estrella = Estrella.new(vida_esperada, masa_esperada) 
+    vidaEsperada = 50
+    masaEsperada = 10
+    estrella = Estrella.new(vidaEsperada, masaEsperada) 
     
-    vida_obtenida = estrella.vida
-    masa_obtenida = estrella.masa    
+    vidaObtenida = estrella.vida
+    masaObtenida = estrella.masa    
 
-    expect(vida_esperada).to eq vida_obtenida
-    expect(masa_esperada).to eq masa_obtenida
+    expect(vidaEsperada).to eq vidaObtenida
+    expect(masaEsperada).to eq masaObtenida
   end
 
 end
