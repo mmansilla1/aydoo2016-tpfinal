@@ -20,14 +20,14 @@ describe 'Nave choca con Asteroide' do
     nave.chocar(asteroide)
     
     vida_nave_obtenida = nave.vida
-    masa_nave_obtenida = nave.masa    
+    masa_naveObtenida = nave.masa    
     vida_asteroide_obtenida = asteroide.vida
     masa_asteroide_obtenida = asteroide.masa    
 
-    expect(vida_nave_esperada).to eq vida_nave_obtenida
-    expect(masa_nave_esperada).to eq masa_nave_obtenida
+    expect(vida_nave_obtenida).to eq vida_nave_esperada
+    expect(masa_naveObtenida).to eq masa_nave_esperada
     expect(vida_asteroide_obtenida).to eq vida_asteroide_esperada
-    expect(masa_asteroide_obtenida).to eq masa_asteroide_esperada    
+    expect(masa_asteroide_obtenida).to eq masa_asteroide_esperada       
     
   end
 
