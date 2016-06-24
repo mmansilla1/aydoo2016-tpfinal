@@ -6,15 +6,15 @@ describe 'Misil' do
 
   it 'debe crear un misil con 10 unidades de vida y 30 unidades de masa' do
     
-    vidaEsperada = 10
-    masaEsperada = 30
-    misil = Misil.new(vidaEsperada, masaEsperada) 
+    vida_esperada = 10
+    masa_esperada = 30
+    misil = Misil.new(vida_esperada, masa_esperada) 
     
-    vidaObtenida = misil.vida
-    masaObtenida = misil.masa    
+    vida_obtenida = misil.vida
+    masa_obtenida = misil.masa    
 
-    expect(vidaEsperada).to eq vidaObtenida
-    expect(masaEsperada).to eq masaObtenida
+    expect(vida_esperada).to eq vida_obtenida
+    expect(masa_esperada).to eq masa_obtenida
   end
 
 end
