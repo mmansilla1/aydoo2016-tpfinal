@@ -3,7 +3,7 @@ require_relative '../model/misil'
 
 describe 'Misil' do
 
-  it 'debe crear un misil con 10 unidades de vida y 30 unidades de masa' do
+  it 'deberia crear un misil con 10 unidades de vida y 30 unidades de masa' do
     
     vida_esperada = 10
     masa_esperada = 30

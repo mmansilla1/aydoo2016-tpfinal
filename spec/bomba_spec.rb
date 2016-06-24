@@ -3,7 +3,7 @@ require_relative '../model/bomba'
 
 describe 'Bomba' do
 
-  it 'debe crear una bomba con 200 unidades de vida y 90 unidades de masa' do
+  it 'deberia crear una bomba con 200 unidades de vida y 90 unidades de masa' do
     
     vida_esperada = 200
     masa_esperada = 90

@@ -3,7 +3,7 @@ require_relative '../model/asteroide'
 
 describe 'Asteroide' do
 
-  it 'debe crear un asteroide con 50 unidades de vida y 100 unidades de masa' do
+  it 'deberia crear un asteroide con 50 unidades de vida y 100 unidades de masa' do
     
     vida_esperada = 50
     masa_esperada = 100

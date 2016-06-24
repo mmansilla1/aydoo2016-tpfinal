@@ -3,7 +3,7 @@ require_relative '../model/estrella'
 
 describe 'Estrella' do
 
-  it 'debe crear una estrella con 50 unidades de vida y 10 unidades de masa' do
+  it 'deberia crear una estrella con 50 unidades de vida y 10 unidades de masa' do
     
     vida_esperada = 50
     masa_esperada = 10

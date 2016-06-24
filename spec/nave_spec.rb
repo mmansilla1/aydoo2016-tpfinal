@@ -12,8 +12,8 @@ describe 'Nave' do
     vida_obtenida = nave.vida
     masa_obtenida = nave.masa    
 
-    expect(vida_obtenida).to eq vida_esperada
-    expect(masa_obtenida).to eq masa_esperada
+    expect(vida_esperada).to eq vida_obtenida
+    expect(masa_esperada).to eq masa_obtenida
   end
 
 end
