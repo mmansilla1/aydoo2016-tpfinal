@@ -26,8 +26,8 @@ describe 'Nave choca con Asteroide' do
 
     expect(vida_nave_esperada).to eq vida_nave_obtenida
     expect(masa_nave_esperada).to eq masa_nave_obtenida
-    expect(vida_asteroide_obtenida).to eq vida_asteroide_esperada
-    expect(masa_asteroide_obtenida).to eq masa_asteroide_esperada    
+    expect(vida_asteroide_esperada).to eq vida_asteroide_obtenida
+    expect(masa_asteroide_esperada).to eq masa_asteroide_obtenida    
     
   end
 
