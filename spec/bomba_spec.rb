@@ -10,8 +10,8 @@ describe 'Bomba' do
     masa_esperada = 90
     bomba = Bomba.new(vida_esperada, masa_esperada) 
     
-    vidaObtenida = bomba.vida
-    masaObtenida = bomba.masa    
+    vida_obtenida = bomba.vida
+    masa_obtenida = bomba.masa    
 
     expect(vida_esperada).to eq vida_obtenida
     expect(masa_esperada).to eq masa_obtenida

@@ -10,8 +10,8 @@ describe 'Asteroide' do
     masa_esperada = 100
     asteroide = Asteroide.new(vida_esperada, masa_esperada) 
     
-    vidaObtenida = asteroide.vida
-    masaObtenida = asteroide.masa    
+    vida_obtenida = asteroide.vida
+    masa_obtenida = asteroide.masa    
 
     expect(vida_esperada).to eq vida_obtenida
     expect(masa_esperada).to eq masa_obtenida
