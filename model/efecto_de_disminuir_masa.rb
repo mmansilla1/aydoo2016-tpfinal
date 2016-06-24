@@ -1,6 +1,6 @@
 class EfectoDisminuirMasa
 
-  def initialize(porcentaje_disminucion)
+  def initialize(porcentaje_de_disminucion)
 
     @porcentaje_de_disminucion = porcentaje_de_disminucion
   end
