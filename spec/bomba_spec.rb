@@ -1,5 +1,4 @@
 require 'rspec' 
-require_relative '../model/objeto_espacial'
 require_relative '../model/bomba'
 
 describe 'Bomba' do

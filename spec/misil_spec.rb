@@ -1,5 +1,4 @@
 require 'rspec' 
-require_relative '../model/objeto_espacial'
 require_relative '../model/misil'
 
 describe 'Misil' do
