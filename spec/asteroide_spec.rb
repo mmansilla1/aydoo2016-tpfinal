@@ -12,8 +12,8 @@ describe 'Asteroide' do
     vida_obtenida = asteroide.vida
     masa_obtenida = asteroide.masa    
 
-    expect(vida_esperada).to eq vida_obtenida
-    expect(masa_esperada).to eq masa_obtenida
+    expect(vida_obtenida).to eq vida_esperada
+    expect(masa_obtenida).to eq masa_esperada
   end
 
 end
