@@ -83,3 +83,5 @@ describe 'Nave choca con Asteroide' do
     expect(masa_asteroide_obtenida).to eq masa_asteroide_esperada 
    
   end
+
+end
