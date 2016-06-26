@@ -134,6 +134,30 @@ describe 'Casos de choque' do
     expect(masa_estrella_obtenida).to eq masa_estrella_esperada    
   end
 
+  it '6) Asteroide con asteroide: Deberia tener efecto nulo para ambos asteroides' do
+    
+    vida_asteroide = 100
+    masa_asteroide = 100
+    asteroide_que_choca = Asteroide.new(vida_asteroide, masa_asteroide) 
+    asteroide_chocado = Asteroide.new(vida_asteroide, masa_asteroide) 
+    vida_asteroide_que_choca_esperada = 100
+    masa_asteroide_que_choca_esperada = 100
+    vida_asteroide_chocado_esperada = 100
+    masa_asteroide_chocado_esperada = 100
+
+    asteroide_que_choca.chocar(asteroide_chocado)
+    
+    vida_asteroide_que_choca_obtenida = asteroide_que_choca.vida
+    masa_asteroide_que_choca_obtenida = asteroide_que_choca.masa    
+    vida_asteroide_chocado_obtenida = asteroide_chocado.vida
+    masa_asteroide_chocado_obtenida = asteroide_chocado.masa     
+
+    expect(vida_asteroide_que_choca_obtenida).to eq vida_asteroide_que_choca_esperada
+    expect(masa_asteroide_que_choca_obtenida).to eq masa_asteroide_que_choca_esperada
+    expect(vida_asteroide_chocado_obtenida).to eq vida_asteroide_chocado_esperada
+    expect(masa_asteroide_chocado_obtenida).to eq masa_asteroide_chocado_esperada    
+  end
+
   it '7) Asteroide con nave: la nave disminuye su masa a 50 unidades y el asteroide la aumenta en 10' do
     
     vida_nave = 100
