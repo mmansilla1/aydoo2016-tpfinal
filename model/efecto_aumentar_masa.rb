@@ -1,4 +1,3 @@
-
 require_relative '../model/efecto'
 
 class EfectoAumentarMasa < Efecto
@@ -14,4 +13,5 @@ class EfectoAumentarMasa < Efecto
     unidades_masa = (objeto_espacial_chocado.masa * @porcentaje_aumento / 100)
     objeto_espacial_que_choca.masa += unidades_masa
   end
+
 end
