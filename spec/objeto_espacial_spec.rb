@@ -30,4 +30,16 @@ describe 'ObjetoEspacial' do
     expect(cantidad_choques_obtenidos).to eq cantidad_choques_esperados
   end
 
+  it 'Deberia agregar el choque posible estrella en los choques posibles' do
+    
+    cantidad_choques_esperados = 2
+    objeto_espacial = ObjetoEspacial.new() 
+    objeto_espacial.agregar_choque_posible(Nave, EfectoAumentarMasa.new(10))
+    
+    objeto_espacial.agregar_choque_posible(Estrella, EfectoNulo.new())
+
+    cantidad_choques_obtenidos = objeto_espacial.choques_posibles.length
+    expect(cantidad_choques_obtenidos).to eq cantidad_choques_esperados
+  end
+
 end
