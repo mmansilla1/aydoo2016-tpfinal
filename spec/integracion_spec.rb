@@ -210,30 +210,30 @@ describe 'Casos de choque' do
     expect(masa_asteroide_obtenida).to eq masa_asteroide_esperada    
   end
 
-  it 'Misil con nave: la nave disminuye su vida a 20 unidades y el misil a 0' do
+  it '9) Asteroide con misil: ni el misil ni el asteroide registran efecto' do
     
-    vida_nave = 100
-    masa_nave = 100
-    nave = Nave.new(vida_nave, masa_nave) 
     vida_misil = 100
     masa_misil = 100
     misil = Misil.new(vida_misil, masa_misil) 
-    vida_nave_esperada = 20
-    masa_nave_esperada = 100
-    vida_misil_esperada = 0
+    vida_asteroide = 100
+    masa_asteroide = 100
+    asteroide = Asteroide.new(vida_asteroide, masa_asteroide) 
+    vida_misil_esperada = 100
     masa_misil_esperada = 100
+    vida_asteroide_esperada = 100
+    masa_asteroide_esperada = 100
 
-    misil.chocar(nave)
+    asteroide.chocar(misil)
     
-    vida_nave_obtenida = nave.vida
-    masa_nave_obtenida = nave.masa    
     vida_misil_obtenida = misil.vida
     masa_misil_obtenida = misil.masa    
+    vida_asteroide_obtenida = asteroide.vida
+    masa_asteroide_obtenida = asteroide.masa    
 
-    expect(vida_nave_obtenida).to eq vida_nave_esperada
-    expect(masa_nave_obtenida).to eq masa_nave_esperada
     expect(vida_misil_obtenida).to eq vida_misil_esperada
-    expect(masa_misil_obtenida).to eq masa_misil_esperada    
+    expect(masa_misil_obtenida).to eq masa_misil_esperada
+    expect(vida_asteroide_obtenida).to eq vida_asteroide_esperada
+    expect(masa_asteroide_obtenida).to eq masa_asteroide_esperada    
   end
 
 end
