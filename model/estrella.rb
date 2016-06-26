@@ -1,5 +1,5 @@
 require_relative '../model/objeto_espacial'
-require_relative '../model/efecto_disminuir_vida_por_porcentaje'
+require_relative '../model/efecto_destructivo_por_porcentaje'
 require_relative '../model/efecto_nulo'
 
 class Estrella < ObjetoEspacial
