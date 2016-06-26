@@ -1,6 +1,7 @@
 require 'rspec' 
 require 'spec_helper'
 require_relative '../model/objeto_espacial'
+require_relative '../model/objeto_espacial_muerto_exception'
 
 describe 'Excepciones' do
 
@@ -19,7 +20,7 @@ describe 'Excepciones' do
     objeto_espacial_que_choca = ObjetoEspacial.new() 
     objeto_espacial_chocado = ObjetoEspacial.new() 
     vida = 0
-    objeto_espacial_chocadodo.vida = vida
+    objeto_espacial_chocado.vida = vida
 
     expect{objeto_espacial_que_choca.chocar(objeto_espacial_chocado)}.to raise_exception(ObjetoEspacialMuertoException)
   end
