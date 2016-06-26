@@ -1,6 +1,6 @@
 require_relative '../model/objeto_espacial'
-require_relative '../model/efecto_disminuir_vida'
-require_relative '../model/efecto_disminuir_vida_por_porcentaje'
+require_relative '../model/efecto_destructivo'
+require_relative '../model/efecto_destructivo_por_porcentaje'
 require_relative '../model/efecto_nulo'
 
 class Misil < ObjetoEspacial
