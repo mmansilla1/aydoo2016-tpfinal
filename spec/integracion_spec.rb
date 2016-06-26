@@ -620,4 +620,30 @@ describe 'Casos de choque' do
     expect(masa_estrella_obtenida).to eq masa_estrella_esperada    
   end
 
+  it 'Estrella con bomba: tanto la bomba como la estrella disminuyen su vida a 0 unidades' do
+    
+    vida_bomba = 100
+    masa_bomba = 100
+    bomba = Bomba.new(vida_bomba, masa_bomba) 
+    vida_estrella = 100
+    masa_estrella = 100
+    estrella = Estrella.new(vida_estrella, masa_estrella) 
+    vida_bomba_esperada = 0
+    masa_bomba_esperada = 100
+    vida_estrella_esperada = 0
+    masa_estrella_esperada = 100
+
+    estrella.chocar(bomba)
+    
+    vida_bomba_obtenida = bomba.vida
+    masa_bomba_obtenida = bomba.masa    
+    vida_estrella_obtenida = estrella.vida
+    masa_estrella_obtenida = estrella.masa    
+
+    expect(vida_bomba_obtenida).to eq vida_bomba_esperada
+    expect(masa_bomba_obtenida).to eq masa_bomba_esperada
+    expect(vida_estrella_obtenida).to eq vida_estrella_esperada
+    expect(masa_estrella_obtenida).to eq masa_estrella_esperada    
+  end
+
 end
