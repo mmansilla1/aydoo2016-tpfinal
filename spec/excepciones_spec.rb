@@ -1,7 +1,6 @@
 require 'rspec' 
 require 'spec_helper'
 require_relative '../model/objeto_espacial'
-require_relative '../model/objeto_espacial_muerto_exception'
 
 describe 'Excepciones' do
 
