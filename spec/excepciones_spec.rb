@@ -1,6 +1,6 @@
 require 'rspec' 
 require 'spec_helper'
-require_relative '../model/ObjetoEspacial'
+require_relative '../model/objeto_espacial'
 
 describe 'Excepciones' do
 
