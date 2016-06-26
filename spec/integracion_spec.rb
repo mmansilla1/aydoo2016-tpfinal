@@ -338,4 +338,30 @@ describe 'Casos de choque' do
     expect(masa_bomba_obtenida).to eq masa_bomba_esperada    
   end  
 
+  it '14) Misil con asteroide: ni el misil ni el asteroide registran efectos' do
+    
+    vida_misil = 100
+    masa_misil = 100
+    misil = Misil.new(vida_misil, masa_misil) 
+    vida_asteroide = 100
+    masa_asteroide = 100
+    asteroide = Asteroide.new(vida_asteroide, masa_asteroide) 
+    vida_misil_esperada = 100
+    masa_misil_esperada = 100
+    vida_asteroide_esperada = 100
+    masa_asteroide_esperada = 100
+
+    misil.chocar(asteroide)
+    
+    vida_misil_obtenida = misil.vida
+    masa_misil_obtenida = misil.masa    
+    vida_asteroide_obtenida = asteroide.vida
+    masa_asteroide_obtenida = asteroide.masa    
+
+    expect(vida_misil_obtenida).to eq vida_misil_esperada
+    expect(masa_misil_obtenida).to eq masa_misil_esperada
+    expect(vida_asteroide_obtenida).to eq vida_asteroide_esperada
+    expect(masa_asteroide_obtenida).to eq masa_asteroide_esperada    
+  end
+
 end
