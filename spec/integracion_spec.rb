@@ -7,10 +7,8 @@ describe 'Casos de choque' do
 
   it '1) Nave con nave: las dos naves disminuyen su vida en 100 unidades' do
     
-    vida_nave = 100
-    masa_nave = 100
-    nave_que_choca = Nave.new(vida_nave, masa_nave) 
-    nave_chocada = Nave.new(vida_nave, masa_nave) 
+    nave_que_choca = Nave.new(100, 100) 
+    nave_chocada = Nave.new(100, 100) 
     vida_nave_que_choca_esperada = 0
     masa_nave_que_choca_esperada = 100
     vida_nave_chocada_esperada = 0
