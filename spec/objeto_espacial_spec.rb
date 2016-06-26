@@ -29,3 +29,5 @@ describe 'ObjetoEspacial' do
     cantidad_choques_obtenidos = objeto_espacial.choques_posibles.length
     expect(cantidad_choques_obtenidos).to eq cantidad_choques_esperados
   end
+
+end
