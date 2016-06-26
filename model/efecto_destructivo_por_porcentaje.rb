@@ -1,6 +1,6 @@
 require_relative '../model/efecto'
 
-class EfectoDisminuirVidaPorPorcentaje < Efecto
+class EfectoDestructivoPorPorcentaje < Efecto
 
 	@porcentaje_disminucion
 
