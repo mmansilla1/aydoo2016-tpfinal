@@ -390,4 +390,30 @@ describe 'Casos de choque' do
     expect(masa_estrella_obtenida).to eq masa_estrella_esperada    
   end
 
+  it '16) Bomba con nave: la nave disminuye su vida a 50 unidades y el bomba a 0' do
+    
+    vida_nave = 100
+    masa_nave = 100
+    nave = Nave.new(vida_nave, masa_nave) 
+    vida_bomba = 100
+    masa_bomba = 100
+    bomba = Bomba.new(vida_bomba, masa_bomba) 
+    vida_nave_esperada = 50
+    masa_nave_esperada = 100
+    vida_bomba_esperada = 0
+    masa_bomba_esperada = 100
+
+    bomba.chocar(nave)
+    
+    vida_nave_obtenida = nave.vida
+    masa_nave_obtenida = nave.masa    
+    vida_bomba_obtenida = bomba.vida
+    masa_bomba_obtenida = bomba.masa    
+
+    expect(vida_nave_obtenida).to eq vida_nave_esperada
+    expect(masa_nave_obtenida).to eq masa_nave_esperada
+    expect(vida_bomba_obtenida).to eq vida_bomba_esperada
+    expect(masa_bomba_obtenida).to eq masa_bomba_esperada    
+  end
+
 end
