@@ -568,4 +568,30 @@ describe 'Casos de choque' do
     expect(masa_estrella_chocada_obtenida).to eq masa_estrella_chocada_esperada    
   end
 
+ it '23) Estrella con asteroide: Deberia el asteroide no registrar efectos y la estrella disminuir su vida a 0' do
+    
+    vida_asteroide = 100
+    masa_asteroide = 100
+    asteroide = Asteroide.new(vida_asteroide, masa_asteroide) 
+    vida_estrella = 100
+    masa_estrella = 100
+    estrella = Estrella.new(vida_estrella, masa_estrella) 
+    vida_asteroide_esperada = 100
+    masa_asteroide_esperada = 100
+    vida_estrella_esperada = 0
+    masa_estrella_esperada = 100
+
+    estrella.chocar(asteroide)
+    
+    vida_asteroide_obtenida = asteroide.vida
+    masa_asteroide_obtenida = asteroide.masa    
+    vida_estrella_obtenida = estrella.vida
+    masa_estrella_obtenida = estrella.masa    
+
+    expect(vida_asteroide_obtenida).to eq vida_asteroide_esperada
+    expect(masa_asteroide_obtenida).to eq masa_asteroide_esperada
+    expect(vida_estrella_obtenida).to eq vida_estrella_esperada
+    expect(masa_estrella_obtenida).to eq masa_estrella_esperada    
+  end
+
 end
