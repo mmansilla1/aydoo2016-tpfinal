@@ -134,6 +134,32 @@ describe 'Casos de choque' do
     expect(masa_asteroide_obtenida).to eq masa_asteroide_esperada    
   end
 
+  it '6) Asteroide con bomba: la bomba disminuye su vida a 0 unidades y el asteroide no registra efectos' do
+    
+    vida_bomba = 100
+    masa_bomba = 100
+    bomba = Bomba.new(vida_bomba, masa_bomba) 
+    vida_asteroide = 100
+    masa_asteroide = 100
+    asteroide = Asteroide.new(vida_asteroide, masa_asteroide) 
+    vida_bomba_esperada = 0
+    masa_bomba_esperada = 100
+    vida_asteroide_esperada = 100
+    masa_asteroide_esperada = 100
+
+    asteroide.chocar(bomba)
+    
+    vida_bomba_obtenida = bomba.vida
+    masa_bomba_obtenida = bomba.masa    
+    vida_asteroide_obtenida = asteroide.vida
+    masa_asteroide_obtenida = asteroide.masa    
+
+    expect(vida_bomba_obtenida).to eq vida_bomba_esperada
+    expect(masa_bomba_obtenida).to eq masa_bomba_esperada
+    expect(vida_asteroide_obtenida).to eq vida_asteroide_esperada
+    expect(masa_asteroide_obtenida).to eq masa_asteroide_esperada    
+  end
+
   it 'Misil con nave: la nave disminuye su vida a 20 unidades y el misil a 0' do
     
     vida_nave = 100
