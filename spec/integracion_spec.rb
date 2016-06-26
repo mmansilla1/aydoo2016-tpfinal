@@ -3,9 +3,9 @@ require 'spec_helper'
 require_relative '../model/nave'
 require_relative '../model/asteroide'
 
-describe 'Distintos tipos de choque' do
+describe 'Casos de choque' do
 
-  it 'Nave con nave: las dos naves disminuyen su vida en 100 unidades' do
+  it '1) Nave con nave: las dos naves disminuyen su vida en 100 unidades' do
     
     vida_nave = 100
     masa_nave = 100
@@ -29,7 +29,7 @@ describe 'Distintos tipos de choque' do
     expect(masa_nave_chocada_obtenida).to eq masa_nave_chocada_esperada    
   end
 
-  it 'Nave con asteroide: la nave disminuye su masa a 50 unidades y el asteroide la aumenta en 10' do
+  it '2) Nave con asteroide: la nave disminuye su masa a 50 unidades y el asteroide la aumenta en 10' do
     
     vida_nave = 100
     masa_nave = 100
@@ -55,7 +55,7 @@ describe 'Distintos tipos de choque' do
     expect(masa_asteroide_obtenida).to eq masa_asteroide_esperada    
   end
 
-  it 'Nave con misil: la nave disminuye su vida a 20 unidades y el misil a 0' do
+  it '3) Nave con misil: la nave disminuye su vida a 20 unidades y el misil a 0' do
     
     vida_nave = 100
     masa_nave = 100
@@ -79,6 +79,33 @@ describe 'Distintos tipos de choque' do
     expect(masa_nave_obtenida).to eq masa_nave_esperada
     expect(vida_misil_obtenida).to eq vida_misil_esperada
     expect(masa_misil_obtenida).to eq masa_misil_esperada    
+  end
+
+
+  it '4) Nave con bomba: la nave disminuye su vida a 50 unidades y el bomba a 0' do
+    
+    vida_nave = 100
+    masa_nave = 100
+    nave = Nave.new(vida_nave, masa_nave) 
+    vida_bomba = 100
+    masa_bomba = 100
+    bomba = Bomba.new(vida_bomba, masa_bomba) 
+    vida_nave_esperada = 50
+    masa_nave_esperada = 100
+    vida_bomba_esperada = 0
+    masa_bomba_esperada = 100
+
+    nave.chocar(bomba)
+    
+    vida_nave_obtenida = nave.vida
+    masa_nave_obtenida = nave.masa    
+    vida_bomba_obtenida = bomba.vida
+    masa_bomba_obtenida = bomba.masa    
+
+    expect(vida_nave_obtenida).to eq vida_nave_esperada
+    expect(masa_nave_obtenida).to eq masa_nave_esperada
+    expect(vida_bomba_obtenida).to eq vida_bomba_esperada
+    expect(masa_bomba_obtenida).to eq masa_bomba_esperada    
   end
 
   it 'Asteroide con nave: la nave disminuye su masa a 50 unidades y el asteroide la aumenta en 10' do
