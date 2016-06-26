@@ -29,12 +29,8 @@ describe 'Casos de choque' do
 
   it '2) Nave con asteroide: la nave disminuye su masa a 50 unidades y el asteroide la aumenta en 10' do
     
-    vida_nave = 100
-    masa_nave = 100
-    nave = Nave.new(vida_nave, masa_nave) 
-    vida_asteroide = 50
-    masa_asteroide = 100
-    asteroide = Asteroide.new(vida_asteroide, masa_asteroide) 
+    nave = Nave.new(100, 100) 
+    asteroide = Asteroide.new(50, 100) 
     vida_nave_esperada = 100
     masa_nave_esperada = 50
     vida_asteroide_esperada = 50
@@ -55,12 +51,8 @@ describe 'Casos de choque' do
 
   it '3) Nave con misil: la nave disminuye su vida a 20 unidades y el misil a 0' do
     
-    vida_nave = 100
-    masa_nave = 100
-    nave = Nave.new(vida_nave, masa_nave) 
-    vida_misil = 100
-    masa_misil = 100
-    misil = Misil.new(vida_misil, masa_misil) 
+    nave = Nave.new(100, 100) 
+    misil = Misil.new(100, 100) 
     vida_nave_esperada = 20
     masa_nave_esperada = 100
     vida_misil_esperada = 0
@@ -82,12 +74,8 @@ describe 'Casos de choque' do
 
   it '4) Nave con bomba: la nave disminuye su vida a 50 unidades y el bomba a 0' do
     
-    vida_nave = 100
-    masa_nave = 100
-    nave = Nave.new(vida_nave, masa_nave) 
-    vida_bomba = 100
-    masa_bomba = 100
-    bomba = Bomba.new(vida_bomba, masa_bomba) 
+    nave = Nave.new(100, 100) 
+    bomba = Bomba.new(100, 100) 
     vida_nave_esperada = 50
     masa_nave_esperada = 100
     vida_bomba_esperada = 0
@@ -108,12 +96,8 @@ describe 'Casos de choque' do
 
   it '5) Nave con estrella: la nave aumenta su masa a 150 unidades y la estrella la disminuye a 0' do
     
-    vida_nave = 100
-    masa_nave = 100
-    nave = Nave.new(vida_nave, masa_nave) 
-    vida_estrella = 50
-    masa_estrella = 100
-    estrella = Estrella.new(vida_estrella, masa_estrella) 
+    nave = Nave.new(100, 100) 
+    estrella = Estrella.new(50, 100) 
     vida_nave_esperada = 150
     masa_nave_esperada = 100
     vida_estrella_esperada = 0
@@ -134,10 +118,8 @@ describe 'Casos de choque' do
 
   it '6) Asteroide con asteroide: Deberia tener efecto nulo para ambos asteroides' do
     
-    vida_asteroide = 100
-    masa_asteroide = 100
-    asteroide_que_choca = Asteroide.new(vida_asteroide, masa_asteroide) 
-    asteroide_chocado = Asteroide.new(vida_asteroide, masa_asteroide) 
+    asteroide_que_choca = Asteroide.new(100, 100) 
+    asteroide_chocado = Asteroide.new(100, 100) 
     vida_asteroide_que_choca_esperada = 100
     masa_asteroide_que_choca_esperada = 100
     vida_asteroide_chocado_esperada = 100
@@ -158,12 +140,8 @@ describe 'Casos de choque' do
 
   it '7) Asteroide con nave: la nave disminuye su masa a 50 unidades y el asteroide la aumenta en 10' do
     
-    vida_nave = 100
-    masa_nave = 100
-    nave = Nave.new(vida_nave, masa_nave) 
-    vida_asteroide = 50
-    masa_asteroide = 100
-    asteroide = Asteroide.new(vida_asteroide, masa_asteroide) 
+    nave = Nave.new(100, 100) 
+    asteroide = Asteroide.new(50, 100) 
     vida_nave_esperada = 100
     masa_nave_esperada = 50
     vida_asteroide_esperada = 50
@@ -183,13 +161,9 @@ describe 'Casos de choque' do
   end
 
   it '8) Asteroide con bomba: la bomba disminuye su vida a 0 unidades y el asteroide no registra efectos' do
-    
-    vida_bomba = 100
-    masa_bomba = 100
-    bomba = Bomba.new(vida_bomba, masa_bomba) 
-    vida_asteroide = 100
-    masa_asteroide = 100
-    asteroide = Asteroide.new(vida_asteroide, masa_asteroide) 
+
+    bomba = Bomba.new(100, 100) 
+    asteroide = Asteroide.new(100, 100) 
     vida_bomba_esperada = 0
     masa_bomba_esperada = 100
     vida_asteroide_esperada = 100
@@ -210,12 +184,8 @@ describe 'Casos de choque' do
 
   it '9) Asteroide con misil: ni el misil ni el asteroide registran efecto' do
     
-    vida_misil = 100
-    masa_misil = 100
-    misil = Misil.new(vida_misil, masa_misil) 
-    vida_asteroide = 100
-    masa_asteroide = 100
-    asteroide = Asteroide.new(vida_asteroide, masa_asteroide) 
+    misil = Misil.new(100, 100) 
+    asteroide = Asteroide.new(100, 100) 
     vida_misil_esperada = 100
     masa_misil_esperada = 100
     vida_asteroide_esperada = 100
@@ -236,12 +206,8 @@ describe 'Casos de choque' do
 
   it '10) Asteroide con estrella: El asteroide no registra efectos y la estrella disminuye su vida a 0' do
     
-    vida_asteroide = 100
-    masa_asteroide = 100
-    asteroide = Asteroide.new(vida_asteroide, masa_asteroide) 
-    vida_estrella = 100
-    masa_estrella = 100
-    estrella = Estrella.new(vida_estrella, masa_estrella) 
+    asteroide = Asteroide.new(100, 100) 
+    estrella = Estrella.new(100, 100) 
     vida_asteroide_esperada = 100
     masa_asteroide_esperada = 100
     vida_estrella_esperada = 0
@@ -262,12 +228,8 @@ describe 'Casos de choque' do
 
   it '11) Misil con nave: la nave disminuye su vida a 20 unidades y el misil a 0' do
     
-    vida_nave = 100
-    masa_nave = 100
-    nave = Nave.new(vida_nave, masa_nave) 
-    vida_misil = 100
-    masa_misil = 100
-    misil = Misil.new(vida_misil, masa_misil) 
+    nave = Nave.new(100, 100) 
+    misil = Misil.new(100, 100) 
     vida_nave_esperada = 20
     masa_nave_esperada = 100
     vida_misil_esperada = 0
@@ -287,11 +249,9 @@ describe 'Casos de choque' do
   end
 
   it '12) Misil con misil: los dos misiles disminuyen su vida en 100 unidades' do
-    
-    vida_misil = 100
-    masa_misil = 100
-    misil_que_choca = Misil.new(vida_misil, masa_misil) 
-    misil_chocado = Misil.new(vida_misil, masa_misil) 
+
+    misil_que_choca = Misil.new(100, 100) 
+    misil_chocado = Misil.new(100, 100) 
     vida_misil_que_choca_esperada = 0
     masa_misil_que_choca_esperada = 100
     vida_misil_chocado_esperada = 0
@@ -312,12 +272,8 @@ describe 'Casos de choque' do
 
   it '13) Misil con bomba: el misil no registra efectos y la bomba disminuye su vida a 50 unidades' do
     
-    vida_misil = 100
-    masa_misil = 100
-    misil = Misil.new(vida_misil, masa_misil) 
-    vida_bomba = 100
-    masa_bomba = 100
-    bomba = Bomba.new(vida_bomba, masa_bomba) 
+    misil = Misil.new(100, 100) 
+    bomba = Bomba.new(100, 100) 
     vida_misil_esperada = 100
     masa_misil_esperada = 100
     vida_bomba_esperada = 50
@@ -337,13 +293,9 @@ describe 'Casos de choque' do
   end  
 
   it '14) Misil con asteroide: ni el misil ni el asteroide registran efectos' do
-    
-    vida_misil = 100
-    masa_misil = 100
-    misil = Misil.new(vida_misil, masa_misil) 
-    vida_asteroide = 100
-    masa_asteroide = 100
-    asteroide = Asteroide.new(vida_asteroide, masa_asteroide) 
+
+    misil = Misil.new(100, 100) 
+    asteroide = Asteroide.new(100, 100) 
     vida_misil_esperada = 100
     masa_misil_esperada = 100
     vida_asteroide_esperada = 100
@@ -363,13 +315,9 @@ describe 'Casos de choque' do
   end
 
   it '15) Misil con estrella: ni el misil ni la estrella registran efecto' do
-    
-    vida_misil = 100
-    masa_misil = 100
-    misil = Misil.new(vida_misil, masa_misil) 
-    vida_estrella = 100
-    masa_estrella = 100
-    estrella = Estrella.new(vida_estrella, masa_estrella) 
+
+    misil = Misil.new(100, 100) 
+    estrella = Estrella.new(100, 100) 
     vida_misil_esperada = 100
     masa_misil_esperada = 100
     vida_estrella_esperada = 100
@@ -389,13 +337,9 @@ describe 'Casos de choque' do
   end
 
   it '16) Bomba con nave: la nave disminuye su vida a 50 unidades y el bomba a 0' do
-    
-    vida_nave = 100
-    masa_nave = 100
-    nave = Nave.new(vida_nave, masa_nave) 
-    vida_bomba = 100
-    masa_bomba = 100
-    bomba = Bomba.new(vida_bomba, masa_bomba) 
+
+    nave = Nave.new(100, 100) 
+    bomba = Bomba.new(100, 100) 
     vida_nave_esperada = 50
     masa_nave_esperada = 100
     vida_bomba_esperada = 0
@@ -416,10 +360,8 @@ describe 'Casos de choque' do
 
   it '17) Bomba con bomba: la dos bombas disminuyen su vida en 100 unidades' do
     
-    vida_bomba = 100
-    masa_bomba = 100
-    bomba_que_choca = Bomba.new(vida_bomba, masa_bomba) 
-    bomba_chocada = Bomba.new(vida_bomba, masa_bomba) 
+    bomba_que_choca = Bomba.new(100, 100) 
+    bomba_chocada = Bomba.new(100, 100) 
     vida_bomba_que_choca_esperada = 0
     masa_bomba_que_choca_esperada = 100
     vida_bomba_chocada_esperada = 0
@@ -440,12 +382,8 @@ describe 'Casos de choque' do
 
   it '18) Bomba con misil: el misil no registra efectos y la bomba la disminuye su vida a 50 unidades' do
     
-    vida_misil = 100
-    masa_misil = 100
-    misil = Misil.new(vida_misil, masa_misil) 
-    vida_bomba = 100
-    masa_bomba = 100
-    bomba = Bomba.new(vida_bomba, masa_bomba) 
+    misil = Misil.new(100, 100) 
+    bomba = Bomba.new(100, 100) 
     vida_misil_esperada = 100
     masa_misil_esperada = 100
     vida_bomba_esperada = 50
@@ -466,12 +404,8 @@ describe 'Casos de choque' do
 
   it '19) Bomba con asteroide: la bomba disminuye su vida a 0 unidades y el asteroide no registra efectos' do
     
-    vida_bomba = 100
-    masa_bomba = 100
-    bomba = Bomba.new(vida_bomba, masa_bomba) 
-    vida_asteroide = 100
-    masa_asteroide = 100
-    asteroide = Asteroide.new(vida_asteroide, masa_asteroide) 
+    bomba = Bomba.new(100, 100) 
+    asteroide = Asteroide.new(100, 100) 
     vida_bomba_esperada = 0
     masa_bomba_esperada = 100
     vida_asteroide_esperada = 100
@@ -492,12 +426,8 @@ describe 'Casos de choque' do
 
   it '20) Bomba con estrella: Tanto la bomba como la estrella disminuyen su vida a 0 unidades' do
     
-    vida_bomba = 100
-    masa_bomba = 100
-    bomba = Bomba.new(vida_bomba, masa_bomba) 
-    vida_estrella = 100
-    masa_estrella = 100
-    estrella = Estrella.new(vida_estrella, masa_estrella) 
+    bomba = Bomba.new(100, 100) 
+    estrella = Estrella.new(100, 100) 
     vida_bomba_esperada = 0
     masa_bomba_esperada = 100
     vida_estrella_esperada = 0
@@ -518,12 +448,8 @@ describe 'Casos de choque' do
 
   it '21) Estrella con nave: la nave aumenta su masa a 150 unidades y la estrella la disminuye a 0' do
     
-    vida_nave = 100
-    masa_nave = 100
-    nave = Nave.new(vida_nave, masa_nave) 
-    vida_estrella = 50
-    masa_estrella = 100
-    estrella = Estrella.new(vida_estrella, masa_estrella) 
+    nave = Nave.new(100, 100) 
+    estrella = Estrella.new(50, 100) 
     vida_nave_esperada = 150
     masa_nave_esperada = 100
     vida_estrella_esperada = 0
@@ -544,10 +470,8 @@ describe 'Casos de choque' do
 
   it '22) Estrella con estrella: Deberian las dos estrellas disminuir su vida a 0' do
     
-    vida_estrella = 100
-    masa_estrella = 100
-    estrella_que_choca = Estrella.new(vida_estrella, masa_estrella) 
-    estrella_chocada = Estrella.new(vida_estrella, masa_estrella) 
+    estrella_que_choca = Estrella.new(100, 100) 
+    estrella_chocada = Estrella.new(100, 100) 
     vida_estrella_que_choca_esperada = 0
     masa_estrella_que_choca_esperada = 100
     vida_estrella_chocada_esperada = 0
@@ -568,12 +492,8 @@ describe 'Casos de choque' do
 
  it '23) Estrella con asteroide: Deberia el asteroide no registrar efectos y la estrella disminuir su vida a 0' do
     
-    vida_asteroide = 100
-    masa_asteroide = 100
-    asteroide = Asteroide.new(vida_asteroide, masa_asteroide) 
-    vida_estrella = 100
-    masa_estrella = 100
-    estrella = Estrella.new(vida_estrella, masa_estrella) 
+    asteroide = Asteroide.new(100, 100) 
+    estrella = Estrella.new(100, 100) 
     vida_asteroide_esperada = 100
     masa_asteroide_esperada = 100
     vida_estrella_esperada = 0
@@ -594,12 +514,8 @@ describe 'Casos de choque' do
 
   it '24) Estrella con misil: ni la estrella ni el misil registran efectos' do
     
-    vida_misil = 100
-    masa_misil = 100
-    misil = Misil.new(vida_misil, masa_misil) 
-    vida_estrella = 100
-    masa_estrella = 100
-    estrella = Estrella.new(vida_estrella, masa_estrella) 
+    misil = Misil.new(100, 100) 
+    estrella = Estrella.new(100, 100) 
     vida_misil_esperada = 100
     masa_misil_esperada = 100
     vida_estrella_esperada = 100
@@ -619,13 +535,9 @@ describe 'Casos de choque' do
   end
 
   it '25) Estrella con bomba: tanto la bomba como la estrella disminuyen su vida a 0 unidades' do
-    
-    vida_bomba = 100
-    masa_bomba = 100
-    bomba = Bomba.new(vida_bomba, masa_bomba) 
-    vida_estrella = 100
-    masa_estrella = 100
-    estrella = Estrella.new(vida_estrella, masa_estrella) 
+
+    bomba = Bomba.new(100, 100) 
+    estrella = Estrella.new(100, 100) 
     vida_bomba_esperada = 0
     masa_bomba_esperada = 100
     vida_estrella_esperada = 0
