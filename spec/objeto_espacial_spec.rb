@@ -42,4 +42,17 @@ describe 'ObjetoEspacial' do
     expect(cantidad_choques_obtenidos).to eq cantidad_choques_esperados
   end
 
+  it 'Deberia eliminar el choque posible nave en los choques posibles' do
+    
+    cantidad_choques_esperados = 1
+    objeto_espacial = ObjetoEspacial.new() 
+    objeto_espacial.agregar_choque_posible(Nave, EfectoAumentarMasa.new(10))
+    objeto_espacial.agregar_choque_posible(Estrella, EfectoNulo.new())
+   
+    objeto_espacial.eliminar_choque_posible(Nave)
+
+    cantidad_choques_obtenidos = objeto_espacial.choques_posibles.length
+    expect(cantidad_choques_obtenidos).to eq cantidad_choques_esperados
+  end
+
 end
