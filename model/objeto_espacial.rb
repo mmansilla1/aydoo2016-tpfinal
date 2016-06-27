@@ -1,26 +1,25 @@
+require_relative '../model/objeto_espacial_sin_vida_exception'
+
 class ObjetoEspacial
 
   attr_accessor :vida, :masa, :choques_posibles
 
-  @vida
-  @masa
-  @esta_vivo
-  @choques_posibles
-
   def initialize()     
     
-    vida = 100
-    masa = 100
-    @vida = vida    
-    @masa = masa
+    @vida = 100   
+    @masa = 100
     @choques_posibles = Hash.new
   end
 
   def chocar(objeto_espacial)
 
-    este_objeto_espacial_antes_de_chocar = (self.class).new(self.vida, self.masa)
+    if !self.esta_vivo? || !objeto_espacial.esta_vivo?
+      fail ObjetoEspacialSinVidaException.new
+    end
+    
+    este_objeto_espacial_antes_de_chocar = (self.class).new(self.vida, self.masa)  
     @choques_posibles[objeto_espacial.class].afectar_objeto(self, objeto_espacial)
-    objeto_espacial.actualizar_por_choque(este_objeto_espacial_antes_de_chocar)
+    objeto_espacial.actualizar_por_choque(este_objeto_espacial_antes_de_chocar) 
   end
 
   def actualizar_por_choque(objeto_espacial)
